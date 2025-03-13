@@ -3,7 +3,7 @@ app_py/AppZero/compresion/
 app_py/AppZero/dwg/
 app_py/AppZero/pdf/
 app_py/AppZero/sep/
-app_py/AppZero/unir/
+unir/
 data.xlsx
 
 # Exceptuar el archivo index.py
