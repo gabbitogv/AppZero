@@ -1,13 +1,13 @@
 # Ignorar todo
-app_py/compresion/
-app_py/dwg/
-app_py/pdf/
-app_py/sep/
-app_py/unir/
-app_py/vini.xlsx
+app_py/AppZero/compresion/
+app_py/AppZero/dwg/
+app_py/AppZero/pdf/
+app_py/AppZero/sep/
+app_py/AppZero/unir/
+app_py/AppZero/vini.xlsx
 
 # Exceptuar el archivo index.py
 !app_py/AppZero/index.py
-!app_py/.venv/
-!app_py/modulos/
+!app_py/AppZero/.venv/
+!app_py/AppZero/modulos/
 !app_py/AppZero/.gitignore
