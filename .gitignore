@@ -4,7 +4,7 @@ app_py/AppZero/dwg/
 app_py/AppZero/pdf/
 app_py/AppZero/sep/
 app_py/AppZero/unir/
-app_py/AppZero/vini.xlsx
+app_py/AppZero/data.xlsx
 
 # Exceptuar el archivo index.py
 !app_py/AppZero/index.py
