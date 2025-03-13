@@ -1,8 +1,8 @@
 # Ignorar todo
-app_py/AppZero/compresion/
-app_py/AppZero/dwg/
-app_py/AppZero/pdf/
-app_py/AppZero/sep/
+compresion/
+dwg/
+pdf/
+sep/
 unir/
 data.xlsx
 
