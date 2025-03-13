@@ -32,8 +32,8 @@ def unir_pdf(carpeta_in,archivo_out):
     return print(f"{n} archivos unidos correctos")
 
 
-carpeta_in='C:\\Users\\Goren_Ingenieria\\Downloads\\Tratamiento\\Unir'
+carpeta_in='C:\\app_py\\AppZero\\Unir'
 
-archivo_out='C:\\Users\\Goren_Ingenieria\\Downloads\\Tratamiento\\Pdf\\out.pdf'
+archivo_out='C:\\app_py\\AppZero\\Pdf\\out.pdf'
 
 unir_pdf(carpeta_in,archivo_out)
