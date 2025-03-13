@@ -1,10 +1,10 @@
 #Ignorar todo
-#app_py/compresion/
-#app_py/dwg/
-#app_py/Pdf/
-#app_py/Sep/
-#app_py/Unir/
-#app_py/vini.xlsx
+app_py/compresion/
+app_py/dwg/
+app_py/Pdf/
+app_py/Sep/
+app_py/Unir/
+app_py/vini.xlsx
 
 #Exceptuar el archivo index.py
 #!app_py/AppZero/index.py
