@@ -34,6 +34,5 @@ def unir_pdf(carpeta_in,archivo_out):
 
 carpeta_in='C:\\app_py\\AppZero\\Unir'
 
-archivo_out='C:\\app_py\\AppZero\\Pdf\\out.pdf'
 
-unir_pdf(carpeta_in,archivo_out)
+

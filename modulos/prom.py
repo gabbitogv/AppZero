@@ -17,7 +17,7 @@ def sumador2 (tapa,interior):
 
 def int_l(y):
 
-    ruta_archivo = r"C:\Users\Goren_Ingenieria\Downloads\vini.xlsx"
+    ruta_archivo = r"C:\\app_py\\AppZero\\vini.xlsx"
     df = pd.read_excel(ruta_archivo, sheet_name="vini")
     
     print(df)

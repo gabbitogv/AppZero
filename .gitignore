@@ -1,4 +1,4 @@
-#Ignorar todo
+# Ignorar todo
 app_py/compresion/
 app_py/dwg/
 app_py/Pdf/
@@ -6,7 +6,7 @@ app_py/Sep/
 app_py/Unir/
 app_py/vini.xlsx
 
-#Exceptuar el archivo index.py
+# Exceptuar el archivo index.py
 !app_py/AppZero/index.py
 !app_py/.venv/
 !app_py/modulos/

@@ -7,7 +7,7 @@ def izquierda(palabra,n):
     return palabra[:n]
 
 
-directorio ="C:\\Users\\Goren_Ingenieria\\Downloads\\Tratamiento\\dwg"
+directorio ="C:\\app_py\\AppZero\\dwg"
 
 os.chdir(directorio)
 
