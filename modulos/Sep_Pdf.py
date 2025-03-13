@@ -1,6 +1,9 @@
 import os
 import fitz
-from modulos.rename_ar import izquierda 
+#from rename_ar import izquierda
+
+def izquierda(palabra,n):
+    return palabra[:n]
 
 def sep_pdf(carpeta_in,archivo_out):    
     nt = 0
@@ -10,14 +13,11 @@ def sep_pdf(carpeta_in,archivo_out):
     
         if nombre_archivo.lower()[-4:] =='.pdf':
 
-            na += 1 
-            
-            ruta_archivo = os.path.join(carpeta_in,nombre_archivo)
-            
+            na += 1       
+            ruta_archivo = os.path.join(carpeta_in,nombre_archivo)            
             nombre_archivo_exp = izquierda(nombre_archivo,len(nombre_archivo)-4)            
-
             pdf = fitz.open(ruta_archivo)
-
+            
             for pagina_num in range(pdf.page_count):
                 
                 pdf_salida = fitz.open()                
@@ -28,9 +28,16 @@ def sep_pdf(carpeta_in,archivo_out):
                     
                 else:
                     nombre_archivo = f"{archivo_out}{nombre_archivo_exp}-{pagina_num + 1}.pdf"
-                
+
+                    
                 pdf_salida.save(nombre_archivo)
                 pdf_salida.close()                
+
             nt+= pagina_num
     
     return print(f"Página {nt + na} cantidad de archivos {na}")
+    
+
+#carpeta_in = 'C:\\app_py\\AppZero\\sep\\'
+#archivo_out = 'C:\\app_py\\AppZero\\pdf\\'
+#sep_pdf(carpeta_in,archivo_out)

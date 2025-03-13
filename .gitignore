@@ -4,11 +4,11 @@ dwg/
 pdf/
 sep/
 unir/
+.venv/
 data.xlsx
 
 # Exceptuar el archivo index.py
 !index.py
-!.venv/
 !modulos/
 !.gitignore
 
