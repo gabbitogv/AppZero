@@ -7,7 +7,7 @@ app_py/Unir/
 app_py/vini.xlsx
 
 #Exceptuar el archivo index.py
-#!app_py/AppZero/index.py
-#!app_py/.venv/
-#!app_py/modulos/
-#!app_py/AppZero/.gitignore
+!app_py/AppZero/index.py
+!app_py/.venv/
+!app_py/modulos/
+!app_py/AppZero/.gitignore
