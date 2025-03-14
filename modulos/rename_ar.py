@@ -47,15 +47,19 @@ def rename_sec(PROYECTO):
     archivos = sorted(archivos)
     n=0
     
-    for archivo in archivos:
+    if len(PROYECTO)>0:
         
-            rename = ""        
-            n+=1               
+        for archivo in archivos:
+        
+                rename = ""        
+                n+=1               
+                       
+                if n < 10:
+                    rename = f"{PROYECTO}0{str(n)}.pdf"
+                else:
+                    rename = f"{PROYECTO}{str(n)}.pdf"
             
-            if n < 10:
-                rename = f"{PROYECTO}0{str(n)}.pdf"
-            else:
-                rename = f"{PROYECTO}{str(n)}.pdf"
-            
-            os.rename(archivo, rename)
-            print(f"{archivo} --> {rename}")
+                os.rename(archivo, rename)
+                print(f"{archivo} --> {rename}")
+    else:
+        print("PROYECTO no puede ser vacio")

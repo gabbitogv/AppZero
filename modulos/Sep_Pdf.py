@@ -36,8 +36,3 @@ def sep_pdf(carpeta_in,archivo_out):
             nt+= pagina_num
     
     return print(f"Página {nt + na} cantidad de archivos {na}")
-    
-
-#carpeta_in = 'C:\\app_py\\AppZero\\sep\\'
-#archivo_out = 'C:\\app_py\\AppZero\\pdf\\'
-#sep_pdf(carpeta_in,archivo_out)
