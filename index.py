@@ -6,13 +6,13 @@ from modulos.sep_pdf import sep_pdf
 
 
 def switch_control(asop):
-    
+    print(asop)
     if asop=="sep_pdf":
         eject = sep_pdf(carpeta_in,archivo_out)
 
-    elif opcion == "rename_ar":
+    elif asop == "rename_ar":
         PROYECTO = str(input("Ingrese nombre proyecto: "))        
-        rename_sec(PROYECTO)
+        eject = rename_sec(PROYECTO)
 
     else:
         eject = print("Sin programa")
