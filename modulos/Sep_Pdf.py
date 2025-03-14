@@ -1,6 +1,6 @@
 import os
 import fitz
-#from rename_ar import izquierda
+
 
 def izquierda(palabra,n):
     return palabra[:n]

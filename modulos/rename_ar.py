@@ -59,11 +59,3 @@ def rename_sec(PROYECTO):
             
             os.rename(archivo, rename)
             print(f"{archivo} --> {rename}")
-        
-        
-
-     
-    
-PROYECTO = str(input("Ingrese nombre proyecto: "))
-print(PROYECTO)
-rename_sec(PROYECTO)
