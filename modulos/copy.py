@@ -7,8 +7,6 @@ destino = "C:\\app_py\\AppZero\\unir\\"
 os.makedirs(origen,exist_ok=True)
 os.makedirs(destino,exist_ok=True)
 
-
-#copia = [1,27,28,29,30,31,32,41,42,43,44,66,84,85,116]
 copia = []
 
 cantidad = int(input("Cuantos archivos va a copiar:"))
