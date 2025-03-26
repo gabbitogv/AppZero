@@ -1,6 +1,6 @@
 import os,sys,fitz
 
-from modulos.rename_ar import izquierda,rename_sec
+from modulos.rename_ar import izquierda,derecha,rename_sec,rename_dwg
 from modulos.sep_pdf import sep_pdf
 from modulos.unir_pdf import unir_pdf
 
@@ -15,8 +15,17 @@ def switch_control(asop):
             eject = sep_pdf(carpeta_in, archivo_out)
 
         elif asop == "rename_ar":
-            PROYECTO = input("Ingrese nombre del proyecto: ")
-            eject = rename_sec(PROYECTO)
+            
+            tipo = input ("¿Es secuencial? : Si (s) o No (n)")
+            pregunta = tipo.lower()
+            PROYECTO = input("Ingrese nombre del proyecto: ")       
+            
+            if pregunta == "s":
+                EXT = input("Extension de los archivos: ")
+                print("Ok")
+                eject = rename_sec(PROYECTO,EXT)
+            else: 
+                eject = rename_dwg(PROYECTO)
 
         elif asop == "unir_pdf":
             carpeta_in = 'C:\\app_py\\AppZero\\unir\\'
@@ -44,7 +53,6 @@ archivos = [f for f in os.listdir(carpeta) if f.endswith(".py")]
 if not archivos:
     print("No hay archivos .py disponibles.")
     exit()
-
 
 print("Seleccione un archivo para ejecutar:")
 for i, archivo in enumerate(archivos, 1):
