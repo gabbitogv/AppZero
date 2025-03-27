@@ -1,6 +1,6 @@
 import shutil,os
 
-proyecto="COT-21312 A.R.G. TRAILER-V01"
+proyecto="PF-CE-093"
 ext =".pdf"
 origen ="C:\\app_py\\AppZero\\pdf\\"
 destino = "C:\\app_py\\AppZero\\unir\\"
