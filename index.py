@@ -3,6 +3,7 @@ import os,sys,fitz
 from modulos.rename_ar import izquierda,derecha,rename_sec,rename_dwg
 from modulos.sep_pdf import sep_pdf
 from modulos.unir_pdf import unir_pdf
+from modulos.prom import int_l
 
 
 def switch_control(asop):
@@ -12,7 +13,11 @@ def switch_control(asop):
     try:
         if asop == "sep_pdf":
             carpeta_in = 'C:\\app_py\\AppZero\\sep\\'
-            eject = sep_pdf(carpeta_in, archivo_out)
+            eject = sep_pdf(carpeta_in, archivo_out)           
+
+        elif asop == "prom":
+            tipo = input ("Cantidad de x1: ")
+            eject = int_l(tipo)
 
         elif asop == "rename_ar":
             
