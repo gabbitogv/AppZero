@@ -6,42 +6,40 @@ def derecha(palabra,n):
 def izquierda(palabra,n):
     return palabra[:n]
 
-def rename_dwg(PROYECTO):      
-      directorio ="C:\\app_py\\AppZero\\dwg"
-      os.chdir(directorio)
-      archivos = os.listdir(directorio)
+def rename_inv():      
+    directorio ="C:\\app_py\\AppZero\\dwg"
+    os.chdir(directorio)
+    archivos = os.listdir(directorio)
     
-      for archivo in archivos:
+    for archivo in archivos:
           
-        if "0_Sheet_" in archivo:
-              
-              nuevo_nombre1 = archivo.replace("0_Sheet_", "")        
-              
-              CP1 = izquierda(nuevo_nombre1,3) #Tipo de Plano         
-              CP2 = derecha(nuevo_nombre1,len(nuevo_nombre1)-3)
-              CP3 =izquierda(CP2,len(CP2)-4)        
-              CP4 = CP3.find("-")
-              CP5 = derecha(archivo,len(archivo)-archivo.rfind("."))
-              #print(f"CP1: {CP1} CP2: {CP2} CP3: {CP3} CP4: {CP4} CP5: {CP5}")
-
-              #PROY = izquierda(CP3,CP4) mas adelante seleccionar que nombre usar, de un proyecto o el inyectado.
-              
-              NUM1 =int(derecha(CP3,len(CP3)-CP4-1))
-          
-              if NUM1 < 10:
-                 NUM2 = "-0"+str(NUM1)
-              else:
-                 NUM2 ="-"+str(NUM1)       
-
-              nuevo_nombre = f"{CP1}{PROYECTO}{NUM2}{CP5}"              
-              os.rename(archivo, nuevo_nombre)
-              print(f"Renombrado: {archivo} -> {nuevo_nombre}")
-
+        if "0_Sheet_" in archivo:              
+            nuevo_nombre0 = archivo.replace("0_Sheet_", "")
         else:
+            nuevo_nombre0 = archivo
 
-              print("Sin cambios")          
+        ext = derecha(nuevo_nombre0,len(nuevo_nombre0)-nuevo_nombre0.rfind('.'))
+        nuevo_nombre1=izquierda(nuevo_nombre0,nuevo_nombre0.rfind('.'))        
+        CP1 = nuevo_nombre1.rfind('-')+1
+        nuevo_nombre2 = izquierda(nuevo_nombre1,CP1)
+        num0 = int(derecha(nuevo_nombre1,len(nuevo_nombre1)-CP1))
+        
+ 
+        if num0 < 10:
+            nuevo_nombre = f"{nuevo_nombre2}0{num0}{ext}"
+        else:
+            nuevo_nombre = f"{nuevo_nombre2}{num0}{ext}"
+        
+        
+        if archivo != nuevo_nombre:        
+            os.rename(archivo, nuevo_nombre)
+        
+        print(f"Renombrado: {archivo} -> {nuevo_nombre}")
 
-def rename_sec(PROYECTO,EXT):
+    return print(f"Proceso Terminado") 
+          
+
+def rename_sec(PROYECTO,EXT,plus):
 
     directorio ="C:\\app_py\\AppZero\\dwg"
     os.chdir(directorio)
@@ -55,12 +53,18 @@ def rename_sec(PROYECTO,EXT):
         for archivo in archivos:
         
                 rename = ""        
-                n+=1               
+                n+=1
+                nk = 0
+                
+                if plus == 0:
+                    nk = n
+                else: 
+                    nk = n + plus-1               
                        
-                if n < 10:
-                    rename = f"{PROYECTO}0{str(n)}.{EXT}"
+                if n + plus < 10:
+                    rename = f"{PROYECTO}-0{str(nk)}.{EXT}"
                 else:
-                    rename = f"{PROYECTO}{str(n)}.{EXT}"
+                    rename = f"{PROYECTO}-{str(nk)}.{EXT}"
             
                 os.rename(archivo, rename)
                 print(f"{archivo} --> {rename}")
@@ -68,5 +72,4 @@ def rename_sec(PROYECTO,EXT):
         print("PROYECTO no puede ser vacio")
 
 
-
-#rename_sec(PROYECTO="PGENA700LL",EXT="dwg")
+rename_sec("CT10 09042025 CS026 PDF","pdf",0)

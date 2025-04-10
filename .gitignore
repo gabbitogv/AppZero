@@ -6,8 +6,10 @@ sep/
 unir/
 mod_ls/
 source/
+cps/
 .venv/
 data.xlsx
+cp.xlsx
 
 # Exceptuar el archivo index.py
 !index.py
