@@ -37,8 +37,6 @@ df2['INICIO2'] = df2.apply(lambda row: derecha(row['PIEZA'], n=row['INICIO']), a
 df2['INICIO3'] = pd.to_numeric(df2['INICIO2'], errors='coerce')
 print(df2)
 
-
-
 maxnum = df2['INICIO3'].max()
 
 df_nuevo = pd.DataFrame({
