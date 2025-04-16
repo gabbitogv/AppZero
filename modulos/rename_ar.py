@@ -72,4 +72,4 @@ def rename_sec(PROYECTO,EXT,plus):
         print("PROYECTO no puede ser vacio")
 
 
-rename_sec("CT10 09042025 CS026 PDF","pdf",0)
+#rename_sec("CT10 09042025 CS026 PDF","pdf",0)
