@@ -1,5 +1,6 @@
 # Ignorar todo
 compresion/
+partlist/
 dwg/
 pdf/
 sep/
@@ -10,9 +11,16 @@ cps/
 .venv/
 data.xlsx
 cp.xlsx
+modulos/__pycache__/
 
 # Exceptuar el archivo index.py
 !index.py
-!modulos/
+!modulos/__ini__.py
+!modulos/copy.py
+!modulos/partlist.py
+!modulos/prom.py
+!modulos/rename_ar.py
+!modulos/sep_pdf.py
+!modulos/unir_pdf.py
 !.gitignore
 
