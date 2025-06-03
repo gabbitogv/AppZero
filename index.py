@@ -1,7 +1,7 @@
 import os,sys,fitz
 
 from modulos.rename_ar import izquierda,derecha,rename_inv
-from modulos.sep_pdf import sep_pdf
+from mod_ls.sep_pdf import sep_pdf
 from modulos.unir_pdf import unir_pdf
 from modulos.prom import int_l
 

@@ -1,8 +1,8 @@
 import shutil,os
 
-proyecto="PF-CE-093"
-ext =".pdf"
-origen ="C:\\app_py\\AppZero\\pdf\\"
+proyecto="PD-CS-026-V001"
+ext =".dwg"
+origen ="C:\\app_py\\AppZero\\dwg\\"
 destino = "C:\\app_py\\AppZero\\unir\\"
 os.makedirs(origen,exist_ok=True)
 os.makedirs(destino,exist_ok=True)
